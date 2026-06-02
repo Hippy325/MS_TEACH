@@ -1,16 +1,23 @@
-# ms_teach
+Архитектура
+Проект построен по принципу Feature-Based Architecture с использованием BLoC для управления состоянием.
+Каждая функциональность разделена на несколько слоев:
+Page — создание зависимостей и регистрация Bloc.
+Bloc — бизнес-логика и управление состоянием.
+Widget — отображаемый интерфейс на основе текущего состояния.
+Shared — работа с локальным хранилищем через SharedPreferences.
+Состояния экрана управляются через flutter_bloc и Equatable.
 
-A new Flutter project.
+Структура проекта:
 
-## Getting Started
+navigation - выбирается какой стартовый экран надо отобразить
+main - главный экран
+onboarding - экран онбординга
+paywal - экран paywall
+utilities - вспомогательные компоненты (UI компоненты и работа с SharedPreferences)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Улучшил бы:
+1) Добавило бы AutoRoute для более удобной навигации
+2) Поправил бы цвета и шрифты, чтобы они брались только как константные для всего проекта
+3) Реализовал бы разные темы и локализацию
+4) Реализовал бы DI
+5) Написал бы тесты
