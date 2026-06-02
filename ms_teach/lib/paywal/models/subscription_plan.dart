@@ -1,0 +1,4 @@
+enum SubscriptionPlan {
+  month,
+  year,
+}
